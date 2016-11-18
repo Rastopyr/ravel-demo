@@ -1,0 +1,217 @@
+@import './bower_components/nib'
+global-reset()
+reset-html5()
+
+lineColor = #EAEFF3
+standardBorder = 1px solid lineColor
+backgroundColor = #F7FAFC
+accentBlue = #4F90D3
+fontBlue = #2E7CCE
+fontColor = #778795
+
+body {
+  font-family: 'Open Sans', sans-serif
+  color: fontColor
+  height: 100%
+  font-size: 24px
+
+  & > div.ember-view {
+    fixed: top 0 left 0 right 0 bottom 0
+    display: flex
+  }
+}
+
+@media (max-width: 1600px) {
+  body {
+    font-size: 22px
+  }
+}
+
+@media (max-width: 1400px) {
+  body {
+    font-size: 20px
+  }
+}
+
+@media (max-width: 1200px) {
+  body {
+    font-size: 18px
+  }
+}
+
+@media (max-width: 1000px) {
+  body {
+    font-size: 16px
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    font-size: 14px
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 12px
+  }
+}
+
+a {
+  color: fontBlue
+}
+
+p {
+  font-size: 0.75em
+
+  &.light-blue {
+    color: lighten(fontBlue, 70%)
+  }
+}
+
+input[type="text"] {
+  font-size: 0.75em
+  font-family: 'Open Sans', sans-serif
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: fontBlue
+
+  &.light {
+    color: white
+  }
+}
+
+.instructions {
+  position: absolute
+  opacity: 0
+}
+
+.contacts-wrapper {
+  border: standardBorder
+  display: flex
+  flex-grow: 1
+  margin: 1em
+  border-radius: 3px
+  position: relative
+
+  .contact-detail {
+    flex: 5 1 auto
+  }
+
+  .contact-search {
+    border-right: standardBorder
+    background: backgroundColor
+    flex: 1 1 auto
+    display: flex
+    flex-direction: column
+
+    .search-wrapper {
+      flex: 0 0 auto
+      border-bottom: standardBorder
+      display: flex
+      background: white
+
+      input {
+        flex-grow: 1
+        border: 0px !important
+        outline: none
+        margin: 0
+        padding: 1em
+      }
+    }
+
+    .contacts-list {
+      flex: 1 1 auto
+      overflow: scroll
+    }
+  }
+}
+
+.contact {
+  display: flex
+  align-items: center
+  position: relative
+  border-bottom: standardBorder
+
+  .photo-wrapper {
+    margin: 0.5em
+    height: 2em
+    width: 2em
+    border-radius: 2em
+    overflow: hidden
+    position: relative
+
+    img {
+      max-width: 100%
+      max-height: 100%
+    }
+  }
+
+  .information {
+    margin: 0.5em
+
+    h2 {
+      margin-bottom: 0.4em
+    }
+
+    p {
+      font-size: 0.7em
+    }
+  }
+
+  &.contact-banner {
+    background: accentBlue
+    padding: 0.5em
+    color: white
+  }
+
+  &.selectable {
+    cursor: pointer
+    user-select: none
+
+    &:before {
+      position: absolute
+      left: 0
+      top: 0
+      bottom: 0
+      width: 3px
+      background: rgba(0,0,0,0)
+      content: ' '
+    }
+
+    &:hover:before {
+      background: lighten(accentBlue, 50%)
+    }
+
+    &.active:before {
+      background: accentBlue
+    }
+  }
+}
+
+.contact-details {
+  padding: 1em
+
+  .section-title {
+    font-size: 1.2em
+    text-transform: uppercase
+    color: fontColor
+    margin-bottom: 0.5em
+  }
+
+  .contact-items {
+    font-size: 1em
+
+    td {
+      padding: 0.75em 0.5em
+      vertical-align: center
+    }
+
+    td.icon {
+      padding-left: 0
+      font-size: 1.5em
+      color: accentBlue
+    }
+  }
+}

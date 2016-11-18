@@ -1,0 +1,3 @@
+{{#each contacts as | contact |}}
+  {{phonebook/contact-item isActive=(if (eq contact contacts.firstObject) 'active') contact=contact}}
+{{/each}}
