@@ -4,7 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'ravel-coding-challenge',
     environment: environment,
-    baseURL: '/ravel-demo/',
+    baseURL: '/',
     locationType: 'history',
     EmberENV: {
       FEATURES: {
@@ -40,6 +40,9 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
+    ENV['ember-cli-mirage'] = {
+      enabled: true,
+    };
     ENV.locationType = 'history';
   }
 
