@@ -15,4 +15,4 @@ export default function(){
     }),
     this.use('toUp')
   );
-};
+}

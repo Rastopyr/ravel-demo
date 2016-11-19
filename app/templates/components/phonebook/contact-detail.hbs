@@ -15,16 +15,16 @@
       <h4 class="section-title">Contact</h4>
       <div class="contact-items">
           <div>
-            <div class="icon">{{fa-icon 'phone'}}</div>
-            <div class="phone">{{if contact.phone contact.phone 'No phone'}}</div>
+            <span class="icon">{{fa-icon 'phone'}}</span>
+            <span class="phone">{{if contact.phone contact.phone 'No phone'}}</span>
           </div>
           <div>
-            <div class="icon">{{fa-icon 'envelope-o'}}</div>
-            <div class="email">{{contact.email}}</div>
+            <span class="icon">{{fa-icon 'envelope-o'}}</span>
+            <span class="email">{{contact.email}}</span>
           </div>
           <div>
-            <div class="icon">{{fa-icon 'birthday-cake'}}</div>
-            <div class="birthday">{{contact.birthday}}</div>
+            <span class="icon">{{fa-icon 'birthday-cake'}}</span>
+            <span class="birthday">{{contact.formatedBirthday}}</span>
           </div>
       </div>
     </div>
