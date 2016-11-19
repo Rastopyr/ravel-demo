@@ -1,6 +1,10 @@
 import Ember from 'ember';
 
-export default Ember.Component.extend({
+const { Component, inject } = Ember;
+
+export default Component.extend({
   tagName: 'ul',
   classNames: ['contacts-list'],
+
+  phonebook: inject.service(),
 });

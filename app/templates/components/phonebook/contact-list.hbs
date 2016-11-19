@@ -1,3 +1,13 @@
-{{#each contacts as | contact |}}
-  {{phonebook/contact-item isActive=(if (eq contact contacts.firstObject) 'active') contact=contact}}
-{{/each}}
+{{#if phonebook.isLoading}}
+  <li class="list-loader">
+    <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+  </li>
+{{else}}
+  <!-- Also I could use loading substate of user and #each-else helper -->
+  {{#each contacts as | contact |}}
+    {{phonebook/contact-item
+      contact=contact
+      isActive=(if (eq contact phonebook.activeContact) 'active')
+    }}
+  {{/each}}
+{{/if}}

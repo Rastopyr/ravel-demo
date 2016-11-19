@@ -1,7 +1,11 @@
 import Ember from 'ember';
 
-export default Ember.Component.extend({
+const { Component, computed } = Ember;
+
+export default Component.extend({
   tagName: 'li',
-  classNames: ['contact', 'selectable'],
-  classNameBindings: ['isActive:active'],
+
+  hrefClass: computed('isActive', function() {
+    return `contact selectable ${this.get('isActive') && 'active'}`;
+  }),
 });
