@@ -12,5 +12,5 @@ export default Route.extend({
     this.set('phonebook.contact', contact);
 
     return contact;
-  }
+  },
 });

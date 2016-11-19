@@ -1,1 +1,3 @@
-{{phonebook/contact-detail details=model}}
+{{#liquid-bind model class="contact-wrapper"}}
+  {{phonebook/contact-detail details=model}}
+{{/liquid-bind}}

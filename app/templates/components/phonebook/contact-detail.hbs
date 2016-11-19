@@ -13,22 +13,20 @@
   <div class="contact-details">
     <div class="contact-section">
       <h4 class="section-title">Contact</h4>
-      <table class="contact-items">
-        <tbody>
-          <tr>
-            <td class="icon">{{fa-icon 'phone'}}</td>
-            <td class="phone">{{if contact.phone contact.phone 'No phone'}}</td>
-          </tr>
-          <tr>
-            <td class="icon">{{fa-icon 'envelope-o'}}</td>
-            <td class="email">{{contact.email}}</td>
-          </tr>
-          <tr>
-            <td class="icon">{{fa-icon 'birthday-cake'}}</td>
-            <td class="birthday">{{contact.birthday}}</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="contact-items">
+          <div>
+            <div class="icon">{{fa-icon 'phone'}}</div>
+            <div class="phone">{{if contact.phone contact.phone 'No phone'}}</div>
+          </div>
+          <div>
+            <div class="icon">{{fa-icon 'envelope-o'}}</div>
+            <div class="email">{{contact.email}}</div>
+          </div>
+          <div>
+            <div class="icon">{{fa-icon 'birthday-cake'}}</div>
+            <div class="birthday">{{contact.birthday}}</div>
+          </div>
+      </div>
     </div>
   </div>
 {{else}}

@@ -178,6 +178,9 @@ h1, h2, h3, h4, h5, h6 {
     background: accentBlue
     padding: 0.5em
     color: white
+
+    width: 100%
+    white-space: normal
   }
 
   &.selectable {
@@ -204,8 +207,15 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.contact-wrapper,
+.contact-search {
+  width: 50%
+}
+
+
 .contact-details {
-  padding: 1em
+  overflow: hidden
+  padding: 0.5em
 
   .section-title {
     font-size: 1.2em
@@ -217,12 +227,12 @@ h1, h2, h3, h4, h5, h6 {
   .contact-items {
     font-size: 1em
 
-    td {
+    > div {
       padding: 0.75em 0.5em
       vertical-align: center
     }
 
-    td.icon {
+    div.icon {
       padding-left: 0
       font-size: 1.5em
       color: accentBlue
