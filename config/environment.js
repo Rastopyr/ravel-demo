@@ -41,7 +41,7 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
     ENV.locationType = 'hash';
-    ENV.baseUrl = '/ravel-coding-challenge/';
+    ENV.baseUrl = '/ravel-demo/';
 
   }
 
