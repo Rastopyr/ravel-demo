@@ -1,4 +1,5 @@
----
+sudo: required
+dist: trusty
 language: node_js
 node_js:
   - "4"
@@ -8,6 +9,19 @@ sudo: false
 cache:
   directories:
     - node_modules
+
+env:
+  - EMBER_VERSION=default
+  - EMBER_VERSION=release
+  - EMBER_VERSION=beta
+  - EMBER_VERSION=canary
+
+matrix:
+  fast_finish: true
+  allow_failures:
+    - env: EMBER_VERSION=release
+    - env: EMBER_VERSION=beta
+    - env: EMBER_VERSION=canary
 
 before_install:
   - npm config set spin false
