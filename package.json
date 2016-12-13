@@ -49,6 +49,7 @@
     "ember-truth-helpers": "1.2.0",
     "ember-welcome-page": "^1.0.3",
     "liquid-fire": "0.26.4",
-    "loader.js": "^4.0.10"
+    "loader.js": "^4.0.10",
+    "semver": "^5.3.0"
   }
 }
