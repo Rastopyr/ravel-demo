@@ -6,6 +6,9 @@ node_js:
 
 sudo: false
 
+services:
+  - docker
+
 cache:
   directories:
     - node_modules
