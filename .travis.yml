@@ -6,15 +6,23 @@ node_js:
 
 sudo: false
 
+services:
+  - docker
+
 cache:
   directories:
     - node_modules
 
 env:
-  - EMBER_VERSION=default
-  - EMBER_VERSION=release
-  - EMBER_VERSION=beta
-  - EMBER_VERSION=canary
+  global:
+    - DOCKER_HUB_ACCOUNT=rastopyr
+    - MAIN_BRANCHES="master develop"
+    - RELEASE_BRANCH="master"
+  matrix:
+    - EMBER_VERSION=default
+    - EMBER_VERSION=release
+    - EMBER_VERSION=beta
+    - EMBER_VERSION=canary
 
 matrix:
   fast_finish: true
@@ -36,3 +44,8 @@ install:
 
 script:
   - npm test
+  - ./bin/semverinc.sh
+  - ./bin/build.sh
+
+after_install:
+  - ./bin/push.sh
