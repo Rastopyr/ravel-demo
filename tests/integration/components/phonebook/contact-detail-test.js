@@ -11,14 +11,14 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{phonebook/contact-detail}}`);
 
-  assert.equal(this.$().text().trim(), '');
+  assert.equal(this.$().text().trim(), 'Not selected contact');
 
   // Template block usage:"
   this.render(hbs`
     {{#phonebook/contact-detail}}
-      template block text
+      Not selected contact
     {{/phonebook/contact-detail}}
   `);
 
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(this.$().text().trim(), 'Not selected contact');
 });

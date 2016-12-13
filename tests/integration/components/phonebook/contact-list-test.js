@@ -19,9 +19,9 @@ test('it renders', function(assert) {
   const actual = this.$().text().trim();
 
   this.render(hbs`<ul class="contact-list">
-  {{#each contacts as | contact |}}
-  {{phonebook/contact-item contact=contact}}
-  {{/each}}
+    {{#each contacts as | contact |}}
+    {{phonebook/contact-item contact=contact}}
+    {{/each}}
   </ul>`);
 
   const expected = this.$().text().trim();

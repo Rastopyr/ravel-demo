@@ -4,6 +4,6 @@ export default Ember.Route.extend({
   templateName: 'contacts/contact',
 
   model() {
-    return this.modelFor('contacts.firstObject');
+    return this.modelFor('contacts').get('firstObject');
   },
 });
