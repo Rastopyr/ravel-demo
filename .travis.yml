@@ -15,6 +15,9 @@ env:
   - EMBER_VERSION=release
   - EMBER_VERSION=beta
   - EMBER_VERSION=canary
+  - DOCKER_HUB_ACCOUNT=rastopyr
+  - MAIN_BRANCHES="master develop"
+  - RELEASE_BRANCH="master"
 
 matrix:
   fast_finish: true
@@ -36,3 +39,8 @@ install:
 
 script:
   - npm test
+  - ./bin/semverinc.sh
+  - ./bin/build.sh
+
+after_install:
+  - ./bin/push.sh
