@@ -11,13 +11,14 @@ cache:
     - node_modules
 
 env:
+  global:
+    - DOCKER_HUB_ACCOUNT=rastopyr
+    - MAIN_BRANCHES="master develop"
+    - RELEASE_BRANCH="master"
   - EMBER_VERSION=default
   - EMBER_VERSION=release
   - EMBER_VERSION=beta
   - EMBER_VERSION=canary
-  - DOCKER_HUB_ACCOUNT=rastopyr
-  - MAIN_BRANCHES="master develop"
-  - RELEASE_BRANCH="master"
 
 matrix:
   fast_finish: true
