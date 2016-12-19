@@ -47,5 +47,5 @@ script:
   - ./bin/semverinc.sh
   - ./bin/build.sh
 
-after_install:
+after_success:
   - ./bin/push.sh
